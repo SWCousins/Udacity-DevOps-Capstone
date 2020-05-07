@@ -1,0 +1,31 @@
+[
+	{
+		"ParameterKey": "EnvironmentName",
+		"ParameterValue": "SpencerCousins-UdacityProject"
+	},
+	{
+		"ParameterKey": "VpcCIDR",
+		"ParameterValue": "10.0.0.0/16"
+	},
+	{
+		"ParameterKey": "PublicSubnet1CIDR",
+		"ParameterValue": "10.0.0.0/24"
+	},
+	{
+		"ParameterKey": "PublicSubnet2CIDR",
+		"ParameterValue": "10.0.1.0/24"
+	},
+	{
+		"ParameterKey": "PrivateSubnet1CIDR",
+		"ParameterValue": "10.0.2.0/24"
+	},
+    {
+        "ParameterKey": "WebServerImageId",
+        "ParameterValue": "ami-003634241a8fcdec0",
+        "ResolvedValue": "Ubuntu Server 18.04 LTS"
+    },
+    {
+        "ParameterKey": "WebServerInstanceType",
+        "ParameterValue": "t3.medium"
+    }
+]
