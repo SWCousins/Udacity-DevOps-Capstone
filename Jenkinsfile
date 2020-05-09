@@ -1,17 +1,17 @@
 pipeline {
-    environment {
-        HELLO = "Hello World"
-    }
-
     agent any
-    
     stages {
-        stage("Build") {
+        stage('Lint HTML'){
             steps {
-                echo "hello world"
-                
+                sh 'tidy -q -e *.html'
+            }
+        }
+        stage('Upload to AWS'){
+            steps {
+                withAWS(region:'us-east-2',credentials:'Jenkins') {
+                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'jenkins-bucket-1133')
             }
         }
     }
 }
-
+}
