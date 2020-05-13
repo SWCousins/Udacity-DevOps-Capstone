@@ -1,10 +1,14 @@
 install:
-    pip install --upgrage pip &&/
-        pip install - requirements.txt
+	pip install --upgrage pip &&/
+		pip install - requirements.txt
 
-test:
+cmd1:
+	@echo "hello"
+    
+cmd2:
+	@echo world
+    
+all: cmd1 cmd2
 
-
-lint:
-
-
+python:
+	python
